@@ -13,7 +13,7 @@ test.describe('AC-02-01 Test Cases', () => {
         await test.step('Loan Amount less than down payment amount',async () => {
         await page.goto(base_URL);
         await registerPage.UserRegister('FirstName'+now, 'LastName'+now, 'address', 'city', 
-        'state', '12345678', '0123456789', '12345678', 'Test'+now,'12345678', '12345678');
+        'state', '12345678', '0123456789', '12345678', 'Test2'+now,'12345678', '12345678');
         await loanPage.RequestLoan('5000', '1000');
         const loanSuccessMessage = await loanPage.getSuccessMessage();
         expect (loanSuccessMessage).toContain('your loan has been approved');
